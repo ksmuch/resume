@@ -1,0 +1,220 @@
+.content {
+    font-size: clamp(15px, 1.3vw, 30px);
+    height: 100vh;
+    padding: 5vh;
+    padding-bottom: 0;
+    background-color: #18191b;
+    z-index: 0;
+    box-sizing: border-box;
+    overflow-y: auto;
+    animation: switch 0.7s ease-out;
+
+    scrollbar-width: thin;
+    scrollbar-color: #88888830 #18191b;
+
+    section:hover {
+        h2 {
+            text-decoration: underline;
+            text-decoration-color: #00A66E;
+            text-underline-offset: 5px;
+            text-decoration-thickness: 2px;
+        }
+    }
+
+    .about {
+        width: 100%;
+        margin-bottom: 2.5vh;
+        border-bottom: 1px solid #595959;
+        
+        ul {
+            padding: 0;
+            margin: 1.5vh 0;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            color: #00A66E;
+            font-weight: 200;
+
+            li {
+                font-size: clamp(15px, 1vw, 30px);
+                margin-right: 1vh;
+
+                &::after {
+                    content: "/";
+                    color: #9D9EA0;
+                    margin-left: 1vh;
+                }
+
+                &:last-child::after {
+                    content: "";
+                }
+            }
+        }
+
+        p {
+            word-spacing: 0.1em;
+            line-height: 1.5;
+            margin: 1vh 0;
+            text-indent: 2em;
+            
+            /*
+            &:active {
+                transform: scaleY(150%) translateY(calc(33% / 2));
+                height: 150%;
+                & + p {
+                    transform: scaleY(50%) translateY(calc(70% / 2));
+                }
+            }
+            */
+        }
+    }
+
+    .contacts {
+        width: 90%;
+        ul {
+            margin: 2vh 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+                height: clamp(15px, 3vw, 100px);
+
+                &:nth-child(1) {
+                    a::before {
+                        background-image: url('/src/assets/phone.svg');
+                    }
+                }
+
+                &:nth-child(2) {
+                    a::before {
+                        background-image: url('/src/assets/mail.svg');
+                    }
+                }
+
+                &:nth-child(3) {
+                    a::before {
+                        background-image: url('/src/assets/telegram.svg');
+                    }
+                }
+
+                a {
+                    display: inline-block;
+                    height: 100%;
+                    color: #D8D8D8;
+                    text-decoration: none;
+
+                    &::before {
+                        content: "";
+                        display: inline-block;
+                        width: clamp(15px, 1.5vw, 30px);
+                        height: clamp(15px, 1.5vw, 30px);
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        transform: translateY(15%);
+                        margin-right: calc(10px + 0.5vw);
+                        transition: 0.2s ease-out;
+                    }
+
+                    &:hover::before  {
+                        margin-right: calc(30px + 1vw);
+                        transform: scale(1.1);
+                    }
+
+                    &:active::before  {
+                        margin-right: 2vw;
+                        transform: scale(0.9);
+                    }
+                }
+
+                span {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+    .content {
+        height: auto;
+        font-size: clamp(5px, 1.3vh, 30px);
+        padding-bottom: 75px;
+
+        .about {
+            li {
+                font-size: clamp(5px, 1.3vh, 30px) !important;
+            }
+        }
+    }
+    .contacts {
+        li {
+            height: 6vw !important;
+
+            a::before {
+                width: clamp(15px, 1.5vh, 30px) !important;
+                height: clamp(15px, 1.5vh, 30px) !important;
+            }
+        }
+    }
+}
+/*
+@media (max-width: 1950px) {
+    .content {
+        font-size: 23px;
+
+        h2 {
+            font-size: 64px;
+        }
+    }
+}
+
+@media (max-width: 1680px) {
+    .content {
+        font-size: 20px;
+
+        h2 {
+            font-size: 58px;
+        }
+    }
+}
+
+@media (max-width: 1366px) {
+    .content {
+        font-size: 18px;
+
+        h2 {
+            font-size: 40px;
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+    .content {
+        font-size: 16px;
+
+        h2 {
+            font-size: 40px;
+        }
+    }
+}
+
+@media (max-width: 1176px) {
+    .content {
+        font-size: 15px;
+
+        h2 {
+            font-size: 38px;
+        }
+    }
+}
+
+@media (max-width: 970px) {
+    .content {
+        font-size: 10px;
+
+        h2 {
+            font-size: 30px;
+        }
+    }
+}
+*/

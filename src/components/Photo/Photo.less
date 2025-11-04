@@ -1,0 +1,114 @@
+.photo {
+    width: 25%;
+    height: 100vh;
+    background-image: 
+        url("../../assets/Me.png"),
+        radial-gradient(circle farthest-side at 50% 80%, #00A66E, #1B1B1B 30%);
+    background-repeat: no-repeat;
+    background-size: 120%;
+    background-position: bottom;
+    box-sizing: border-box;
+    box-shadow: 4px 0 20px 0 #121212;
+    z-index: 1;
+    flex-shrink: 0;
+
+    &:hover {
+        animation: gradient 0.5s forwards;
+
+        h1 {
+            animation: text-gradient 1s ease-in forwards;
+        }
+    }
+
+    h1 {
+        font-family: "Gerhaus", "Arial", sans-serif;
+        font-size: clamp(10px, 4vw, 200px);
+        color: #D8D8D8;
+        line-height: 80%;
+        text-align: center;
+        margin: 0;
+        margin-top: 5vh;
+        background-image: 
+            radial-gradient(
+                circle at 100% 100%,
+                #00A66E 0%,
+                #00A66E 5%,
+                #006B47 5%,
+                #006B47 10%,
+                #D8D8D8 10%,
+                #D8D8D8 100%
+            );
+        background-position: 100% 100%;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    p {
+        font-family: "Montserrat", "Arial", sans-serif;
+        font-size: clamp(10px, 1.5vw, 70px);
+        font-weight: 600;
+        color: #00A66E;
+        text-align: center;
+        margin: 15px 0;
+    }
+}
+
+@keyframes gradient {
+    from {
+        background-size: 120%, 100% 100%;
+    }
+
+    to {
+        background-size: 120%, 100% 150%;
+    }
+}
+
+@keyframes text-gradient {
+    from {
+        background-size: 100% 100%;
+    }
+
+    to {
+        background-size: 4000% 3000%;
+    }
+}
+
+@media (max-width: 768px) and (orientation: portrait){
+    .photo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100vw;
+        height: 40vw;
+        padding: 1vh;
+        background-image: 
+            url("../../assets/Me.png"),
+            radial-gradient(circle farthest-side at right, #00A66E, #1B1B1B 40%);
+        background-size: 40%, auto;
+        background-position: 100% 50%, 100%;
+        box-shadow: none;
+
+        &:hover {
+            animation: none;
+        }
+
+
+        h1 {
+            font-family: "Gerhaus", "Arial", sans-serif;
+            font-size: 40px;
+            color: #D8D8D8;
+            text-align: left;
+            margin: 0;
+            margin-left: 10%;
+            margin-bottom: 3%;
+        }
+
+        p {
+            font-size: 15px;
+            color: #00A66E;
+            text-align: left;
+            margin: 0;
+            margin-left: 10%;
+        }
+    }
+}

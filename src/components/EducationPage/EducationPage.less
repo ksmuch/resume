@@ -1,0 +1,62 @@
+.education {
+    height: 100vh;
+    padding: 5vh;
+    padding-bottom: 0;
+    background-color: #18191b;
+    z-index: 0;
+    box-sizing: border-box;
+    overflow-y: auto;
+    animation: switch 0.7s ease-out;
+    font-size: clamp(15px, 1.3vw, 30px);
+
+    scrollbar-width: thin;
+    scrollbar-color: #88888830 #18191b;
+
+    &:hover {
+        h2 {
+            text-decoration: underline;
+            text-decoration-color: #00A66E;
+            text-underline-offset: 5px;
+            text-decoration-thickness: 2px;
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 2em;
+        margin-bottom: 5vh;
+
+        li {
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+
+    & > p {
+        word-spacing: 0.05em;
+        line-height: 1.5;
+        margin: 1vh 0;
+        text-indent: 2em;
+
+        a {
+            color: #00A66E;
+
+            &:hover {
+                color: #007F54
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+    .education {
+        height: auto;
+        font-size: clamp(5px, 1.3vh, 30px);
+        padding-bottom: 75px;
+
+        & > p {
+        width: 100%;
+    }
+    }
+}

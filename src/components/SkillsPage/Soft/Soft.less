@@ -1,0 +1,27 @@
+.soft {
+    margin: 0;
+    list-style: none;
+    font-size: clamp(12.5px, 2.5vh, 30px);
+
+    li {
+        padding: 0.5vw 0;
+        width: 50%;
+        transition: 0.3s;
+        cursor: default;
+
+        &:hover {
+            transform: translateX(clamp(10px, 1vw, 30px));
+        }
+    }
+}
+
+@media (max-width: 780px) and (orientation: portrait){
+    .soft {
+        font-size: clamp(10px, 2vh, 25px);
+
+        li {
+            width: 100%;
+            padding: 1vh 0;
+        }
+    }
+}

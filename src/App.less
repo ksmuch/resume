@@ -1,0 +1,28 @@
+h2 {
+    font-family: "Gerhaus", "Arial", sans-serif;
+    font-size: clamp(20px, 4vw, 80px);
+    margin: 0;
+    transition: 0.3s ease-out;
+    text-decoration: none;
+    text-decoration-color: #18191b;
+    text-underline-offset: 20px;
+}
+
+
+@keyframes switch {
+    from {
+        transform: translateY(3%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) and (orientation: portrait){
+    h2 {
+        font-size: clamp(12px, 4vh, 96px);
+    }
+}
