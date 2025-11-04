@@ -1,5 +1,5 @@
 import "./Menu.less";
-import IconMenu from "../../../public/../public/assets/menu.svg?react";
+import IconMenu from "../../../public/assets/menu.svg?react";
 import IconDownload from "../../../public/assets/download.svg?react";
 import IconAbout from "../../../public/assets/about.svg?react";
 import IconSkills from "../../../public/assets/skills.svg?react";
@@ -49,10 +49,12 @@ export default function Menu({ switchMenu, page }: MenuProps) {
                     </button>
                 </li>
                 <li>
-                    <button>
-                        <IconDownload fill={activeColor} />
-                        <h4>Скачать резюме</h4>
-                    </button>
+                    <a href="./assets/resume.pdf" download>
+                        <button>
+                            <IconDownload fill={activeColor} />
+                            <h4>Скачать резюме</h4>
+                        </button>
+                    </a>
                 </li>
             </ul>
         </nav>
