@@ -6,7 +6,7 @@ export default function ExperiencePage() {
             <h2>ОПЫТ</h2>
             <ul className="projects">
                 <li>
-                    <img src="/src/assets/proj_1.png" />
+                    <img src="./assets/proj_1.png" />
                     <div className="description">
                         <div>
                             <h3><a href="https://ksmuch.github.io/memory-game/">Memory-game (Desktop)</a></h3>
@@ -17,7 +17,7 @@ export default function ExperiencePage() {
                     </div>
                 </li>
                 <li>
-                    <img src="/src/assets/proj_2.png" />
+                    <img src="./assets/proj_2.png" />
                     <div className="description">
                         <div>
                             <h3><a href="#">Сайт-резюме (Adaptive)</a></h3>
