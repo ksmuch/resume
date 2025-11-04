@@ -1,10 +1,10 @@
 import "./Menu.less";
-import IconMenu from "../../assets/menu.svg?react";
-import IconDownload from "../../assets/download.svg?react";
-import IconAbout from "../../assets/about.svg?react";
-import IconSkills from "../../assets/skills.svg?react";
-import IconExpirience from "../../assets/experience.svg?react";
-import IconEducation from "../../assets/education.svg?react";
+import IconMenu from "../../../public/../public/assets/menu.svg?react";
+import IconDownload from "../../../public/assets/download.svg?react";
+import IconAbout from "../../../public/assets/about.svg?react";
+import IconSkills from "../../../public/assets/skills.svg?react";
+import IconExpirience from "../../../public/assets/experience.svg?react";
+import IconEducation from "../../../public/assets/education.svg?react";
 import { useState } from "react";
 
 
